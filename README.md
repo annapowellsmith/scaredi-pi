@@ -4,6 +4,8 @@ Script to obtain the latest normalised confirmed Covid-19 case numbers in a loca
 and display then on an e-paper screen powered by your Raspberry Pi. Run this as a cron job to
 update the numbers as often as you like.
 
+<img src="https://i.imgur.com/IK3rQEi.jpg" width="400" style="margin-left: 20px" alt="Dashboard showing case numbers">
+
 Case numbers are obtained from [the official UK coronavirus dashboard API](https://coronavirus.data.gov.uk/details/developers-guide).
 
 Tested on raspberrypi 5.4.51 with a [1.54 inch V2 Waveshare EPD](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module).
