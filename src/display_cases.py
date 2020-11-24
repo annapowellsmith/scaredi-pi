@@ -60,7 +60,7 @@ def get_cases():
     return cases_per_1000
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-assets_dir = '%s/assets' % dir_path
+assets_dir = '%s/../assets' % dir_path
 
 def main():
     cases_per_1000 = get_cases()
