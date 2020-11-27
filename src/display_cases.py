@@ -19,6 +19,11 @@ LTLA_NAME = "Stroud"
 LTLA_POPULATION = 119019
 FONT_FILE = "Roboto-Medium.ttf"
 
+# Approximate multiplier between confirmed cases in past 7 days and
+# actual prevalence in population, based on observing differences
+# between ONS infection survey and Zoe estimates, and reported cases.
+CASE_MULTIPLIER = 5
+
 def get_cases():
     ENDPOINT = "https://api.coronavirus.data.gov.uk/v1/data"
     AREA_TYPE = "ltla"
@@ -52,7 +57,7 @@ def get_cases():
             raise RuntimeError(f'Request failed: { response.text }')
         response = json.loads(response.content)
         cases = response['data'][0]['newCasesBySpecimenDateRollingSum']
-        cases_per_1000 = (cases / LTLA_POPULATION * 1000)
+        cases_per_1000 = (((cases * CASE_MULTIPLIER) / LTLA_POPULATION) * 1000.0)
     except Exception as e:
         print(e)
         cases_per_1000 = -1

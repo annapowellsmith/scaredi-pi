@@ -6,7 +6,7 @@ update the numbers as often as you like.
 
 <img src="https://i.imgur.com/IK3rQEi.jpg" width="400" style="margin-left: 20px" alt="Dashboard showing case numbers">
 
-Case numbers are obtained from [the official UK coronavirus dashboard API](https://coronavirus.data.gov.uk/details/developers-guide).
+Case numbers are obtained from [the official UK coronavirus dashboard API](https://coronavirus.data.gov.uk/details/developers-guide), then multiplied by an estimate for the actual prevalence in the population, to reach an estimate of the approximate real case rate.
 
 Tested on raspberrypi 5.4.51 with a [1.54 inch V2 Waveshare EPD](https://www.waveshare.com/wiki/1.54inch_e-Paper_Module).
 
